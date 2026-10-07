@@ -1,18 +1,17 @@
 #include <iostream>
 #include <Windows.h>
 
-int PodschetSkidka(int skidka, int arr_tea, int summ_check)
+int PodschetSkidka(int skidka, int kolvo, int summ_check, int arr_tea)
 {
-	skidka = arr_tea % 3;
-	if (skidka != 0)
+	skidka = kolvo / 3;
+	if (skidka >= 0 )
 	{
-		for (int i = skidka; i > 0; i--)
-		{
-			std::cout << "Поздравляем! Скидка целых 5 процентов\n";
-			Sleep(1500);
-			summ_check = ((3 * arr_tea) * 5) / 100;
-			break;
-		}
+		
+		std::cout << "Поздравляем! Скидка целых 5 процентов\n";
+		Sleep(1500);
+		
+		summ_check = (((3 * arr_tea) * 5) / 100) * skidka;
+		
 	}
 	return summ_check;
 }
@@ -182,7 +181,7 @@ int main()
 					if (i == 2)
 					{
 						
-						summ_check -= PodschetSkidka(skidka, arr_tea[1], summ_check);
+						summ_check -= PodschetSkidka(skidka, choose, summ_check, arr_tea[1]);
 
 					}
 					summ_check += choose * arr_tea[i - 1];
