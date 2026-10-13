@@ -23,17 +23,7 @@ int PodschetSkidka(int skidka, int kolvo, int summ_check, int arr_tea)
 }
 int GalyaOtmena(int check_vse[])
 {
-	const int size = 20;
-	const char apple[size] = "Яблоко";
-	const char orange[size] = "Апельсин";
-	const char abrikos[size] = "Абрикос";
-	const char grusha[size] = "Груша";
-	const char tomato[size] = "Томаты";
-	const char luk[size] = "Лук";
-	const char cucember[size] = "Огурцы";
-	const char chesnok[size] = "Чеснок";
-	const char petrusha[size] = "Петрушка";
-	const char boyar[size] = "Боярешник";
+	
 	int arr[10][10];
 
 	int arr_fruit[4] = { 100, 200, 300, 400 };
@@ -61,110 +51,77 @@ int GalyaOtmena(int check_vse[])
 				{
 					arr[i][b] = i;
 					std::cout << i++ << ". ";
-					for (int j = 0; j <= size; j++)
-					{
-						std::cout << apple[j];
-					}
-					std::cout << ": " << check_vse[0] << "\n";
+					std::cout << "Яблоки: " << check_vse[0] << "\n";
 
 				}
 				if (check_vse[1] != 0)
 				{
 					arr[i][b] = i;
 					std::cout << i++ << ". ";
-					for (int j = 0; j <= size; j++)
-					{
-						std::cout << orange[j];
-					}
-					std::cout << ": " << check_vse[1] << "\n";
+					std::cout << "Апельсины: " << check_vse[1] << "\n";
 
 				}
 				if (check_vse[2] != 0)
 				{
 					arr[i][b] = i;
 					std::cout << i++ << ". ";
-					for (int j = 0; j <= size; j++)
-					{
-						std::cout << abrikos[j];
-					}
-					std::cout << ": " << check_vse[2] << "\n";
+					
+					std::cout << "Абрикосы: " << check_vse[2] << "\n";
 
 				}
 				if (check_vse[3] != 0)
 				{
 					arr[i][b] = i;
 					std::cout << i++ << ". ";
-					for (int j = 0; j <= size; j++)
-					{
-						std::cout << grusha[j];
-					}
-					std::cout << ": " << check_vse[3] << "\n";
+					
+					std::cout << "Груша: " << check_vse[3] << "\n";
 
 				}
 				if (check_vse[4] != 0)
 				{
 					arr[i][b] = i;
 					std::cout << i++ << ". ";
-					for (int j = 0; j <= size; j++)
-					{
-						std::cout << tomato[j];
-					}
-					std::cout << ": " << check_vse[4] << "\n";
+					
+					std::cout << "Помидоры: " << check_vse[4] << "\n";
 
 				}
 				if (check_vse[5] != 0)
 				{
 					arr[i][b] = i;
 					std::cout << i++ << ". ";
-					for (int j = 0; j <= size; j++)
-					{
-						std::cout << luk[j];
-					}
-					std::cout << ": " << check_vse[5] << "\n";
+					
+					std::cout << "Лук: " << check_vse[5] << "\n";
 
 				}
 				if (check_vse[6] != 0)
 				{
 					arr[i][b] = i;
 					std::cout << i++ << ". ";
-					for (int j = 0; j <= size; j++)
-					{
-						std::cout << cucember[j];
-					}
-					std::cout << ": " << check_vse[6] << "\n";
+					std::cout << "Огурцы: " << check_vse[6] << "\n";
 
 				}
 				if (check_vse[7] != 0)
 				{
 					arr[i][b] = i;
 					std::cout << i++ << ". ";
-					for (int j = 0; j <= size; j++)
-					{
-						std::cout << chesnok[j];
-					}
-					std::cout << ": " << check_vse[7] << "\n";
+					
+					std::cout << "Чеснок: " << check_vse[7] << "\n";
 
 				}
 				if (check_vse[8] != 0)
 				{
 					arr[i][b] = i;
 					std::cout << i++ << ". ";
-					for (int j = 0; j <= size; j++)
-					{
-						std::cout << petrusha[j];
-					}
-					std::cout << ": " << check_vse[8] << "\n";
+					
+					std::cout << "Петрушка: " << check_vse[8] << "\n";
 
 				}
 				if (check_vse[9] != 0)
 				{
 					arr[i][b] = i;
 					std::cout << i++ << ". ";
-					for (int j = 0; j <= size; j++)
-					{
-						std::cout << boyar[j];
-					}
-					std::cout << ": " << check_vse[9] << "\n";
+					
+					std::cout << "Боярешник: " << check_vse[9] << "\n";
 
 				}
 				std::cout << "Какой товар вы хотите удалить? (0 - передумали удалять)\n";
@@ -216,18 +173,6 @@ int main()
 	int choose = 0;
 	int skidka = 0;
 	int arr_fruit[4] = { 100, 200, 300, 400 };
-
-	const int size = 20;
-	const char apple[size] = "Яблоко";
-	const char orange[size] = "Апельсин";
-	const char abrikos[size] = "Абрикос";
-	const char grusha[size] = "Груша";
-	const char tomato[size] = "Томаты";
-	const char luk[size] = "Лук";
-	const char cucember[size] = "Огурцы";
-	const char chesnok[size] = "Чеснок";
-	const char petrusha[size] = "Петрушка";
-	const char boyar[size] = "Боярешник";
 
 
 	int check_vse[10]{};
@@ -480,83 +425,44 @@ int main()
 					std::cout << "Корзина:\n";
 					if (check_vse[0] != 0)
 					{
-						for (int j = 0; j <= size; j++)
-						{
-							std::cout << apple[j];
-						}
-						std::cout << ": " << check_vse[0] << "\n";
+						std::cout << "Яблоки: " << check_vse[0] << "\n";
 					}
 					if (check_vse[1] != 0)
 					{
-						for (int j = 0; j <= size; j++)
-						{
-							std::cout << orange[j];
-						}
-						std::cout << ": " << check_vse[1] << "\n";
+						std::cout << "Апельсины: " << check_vse[1] << "\n";
 					}
 					if (check_vse[2] != 0)
 					{
-						for (int j = 0; j <= size; j++)
-						{
-							std::cout << abrikos[j];
-						}
-						std::cout << ": " << check_vse[2] << "\n";
+						
+						std::cout << "Абрикосы: " << check_vse[2] << "\n";
 					}
 					if (check_vse[3] != 0)
 					{
-						for (int j = 0; j <= size; j++)
-						{
-							std::cout << grusha[j];
-						}
-						std::cout << ": " << check_vse[3] << "\n";
+						std::cout << "Грушы: " << check_vse[3] << "\n";
 					}
 					if (check_vse[4] != 0)
 					{
-						for (int j = 0; j <= size; j++)
-						{
-							std::cout << tomato[j];
-						}
-						std::cout << ": " << check_vse[4] << "\n";
+						std::cout << "Помидоры: " << check_vse[4] << "\n";
 					}
 					if (check_vse[5] != 0)
 					{
-						for (int j = 0; j <= size; j++)
-						{
-							std::cout << luk[j];
-						}
-						std::cout << ": " << check_vse[5] << "\n";
+						std::cout << "Лук: " << check_vse[5] << "\n";
 					}
 					if (check_vse[6] != 0)
 					{
-						for (int j = 0; j <= size; j++)
-						{
-							std::cout << cucember[j];
-						}
-						std::cout << ": " << check_vse[6] << "\n";
+						std::cout << "Огурцы: " << check_vse[6] << "\n";
 					}
 					if (check_vse[7] != 0)
 					{
-						for (int j = 0; j <= size; j++)
-						{
-							std::cout << chesnok[j];
-						}
-						std::cout << ": " << check_vse[7] << "\n";
+						std::cout << "Чеснок: " << check_vse[7] << "\n";
 					}
 					if (check_vse[8] != 0)
 					{
-						for (int j = 0; j <= size; j++)
-						{
-							std::cout << petrusha[j];
-						}
-						std::cout << ": " << check_vse[8] << "\n";
+						std::cout << "Петрушка: " << check_vse[8] << "\n";
 					}
 					if (check_vse[9] != 0)
 					{
-						for (int j = 0; j <= size; j++)
-						{
-							std::cout << boyar[j];
-						}
-						std::cout << ": " << check_vse[9] << "\n";
+						std::cout << "Боярешник: " << check_vse[9] << "\n";
 					}
 
 
