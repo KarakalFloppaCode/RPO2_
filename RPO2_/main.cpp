@@ -24,21 +24,20 @@ int PodschetSkidka(int skidka, int kolvo, int summ_check, int arr_tea)
 int GalyaOtmena(int check_vse[])
 {
 	
-	int arr[10][10];
-
+	int arr[11][2];
+	
 	int arr_fruit[4] = { 100, 200, 300, 400 };
 	int arr_ovoshi[3] = { 25, 30, 50 };
 	int arr_tea[2] = { 125, 250 };
 	int arr_nastoyka[1] = { 100 };
 	int summ_check = 0;
 	int arr_vse[10] = { 100, 200, 300, 400, 25, 30, 50, 125, 250, 100 };
-
 	while (true)
 	{
 		int choose = 0;
 		system("cls");
 		std::cout << "Вы взяли: \n";
-
+	
 
 
 
@@ -49,82 +48,92 @@ int GalyaOtmena(int check_vse[])
 			{
 				if (check_vse[0] != 0)
 				{
-					arr[i][b] = i;
-					std::cout << i++ << ". ";
+					arr[i][b] = 0;
+					arr[i][1] = i;
+					std::cout << i << ". ";
 					std::cout << "Яблоки: " << check_vse[0] << "\n";
-
+					i++;
 				}
 				if (check_vse[1] != 0)
 				{
-					arr[i][b] = i;
-					std::cout << i++ << ". ";
+					arr[i][b] = 1;
+					arr[i][1] = i;
+					std::cout << i << ". ";
 					std::cout << "Апельсины: " << check_vse[1] << "\n";
-
+					i++;
 				}
 				if (check_vse[2] != 0)
 				{
-					arr[i][b] = i;
-					std::cout << i++ << ". ";
+					arr[i][b] = 2;
+					arr[i][1] = i;
+					std::cout << i << ". ";
 					
 					std::cout << "Абрикосы: " << check_vse[2] << "\n";
-
+					i++;
 				}
 				if (check_vse[3] != 0)
 				{
-					arr[i][b] = i;
-					std::cout << i++ << ". ";
+					arr[i][b] = 3;
+					arr[i][1] = i;
+					std::cout << i << ". ";
 					
 					std::cout << "Груша: " << check_vse[3] << "\n";
-
+					i++;
 				}
 				if (check_vse[4] != 0)
 				{
-					arr[i][b] = i;
-					std::cout << i++ << ". ";
+					arr[i][1] = i;
+					arr[i][b] = 4;
+					std::cout << i << ". ";
 					
 					std::cout << "Помидоры: " << check_vse[4] << "\n";
-
+					i++;
 				}
 				if (check_vse[5] != 0)
 				{
-					arr[i][b] = i;
-					std::cout << i++ << ". ";
-					
+					arr[i][b] = 5;
+					arr[i][1] = i;
+					std::cout << i << ". ";
+					i++;
 					std::cout << "Лук: " << check_vse[5] << "\n";
 
 				}
 				if (check_vse[6] != 0)
 				{
-					arr[i][b] = i;
-					std::cout << i++ << ". ";
+					arr[i][b] = 6;
+					arr[i][1] = i;
+					std::cout << i << ". ";
 					std::cout << "Огурцы: " << check_vse[6] << "\n";
-
+					i++;
 				}
 				if (check_vse[7] != 0)
 				{
-					arr[i][b] = i;
-					std::cout << i++ << ". ";
+					arr[i][b] = 7;
+					arr[i][1] = i;
+					std::cout << i << ". ";
 					
 					std::cout << "Чеснок: " << check_vse[7] << "\n";
-
+					i++;
 				}
 				if (check_vse[8] != 0)
 				{
-					arr[i][b] = i;
-					std::cout << i++ << ". ";
+					arr[i][b] = 8;
+					arr[i][1] = i;
+					std::cout << i << ". ";
 					
 					std::cout << "Петрушка: " << check_vse[8] << "\n";
-
+					i++;
 				}
 				if (check_vse[9] != 0)
 				{
-					arr[i][b] = i;
-					std::cout << i++ << ". ";
+					arr[i][b] = 9;
+					arr[i][1] = i;
+					std::cout << i << ". ";
 					
 					std::cout << "Боярешник: " << check_vse[9] << "\n";
-
+					i++;
 				}
-				std::cout << "Какой товар вы хотите удалить? (0 - передумали удалять)\n";
+				std::cout << "Какой товар вы хотите удалить? (0 - Выйти)\n";
 				std::cout << "Ввод: ";
 				std::cin >> choose;
 				i = choose;
@@ -132,11 +141,13 @@ int GalyaOtmena(int check_vse[])
 				{
 					for (int j = 0; j < 1; j++)
 					{
-						if (choose == arr[i][b])
+						if (choose == arr[i][1])
 						{
+							j = arr[i][0];
+							summ_check += arr_vse[j]*check_vse[j];
+
 							check_vse[j] = 0;
 
-							summ_check = arr_vse[j];
 							std::cout << "Успешно";
 							Sleep(1500);
 
@@ -172,17 +183,15 @@ int main()
 
 	int choose = 0;
 	int skidka = 0;
-	int arr_fruit[4] = { 100, 200, 300, 400 };
 
 
 	int check_vse[10]{};
 
+	int arr_vse[10] = { 100, 200, 300, 400, 25, 30, 50, 125, 250, 100 };
+
 	int apple_check = 0;
 	int petruska_skidka = 0;
 	int proverka_fruit = 0;
-	int arr_ovoshi[3] = { 25, 30, 50 };
-	int arr_tea[2] = { 125, 250 };
-	int arr_nastoyka[1] = { 100 };
 	int check = 0, kategory = 0;
 	double summ_check = 0;
 	int summ_check_skidka = 0;
@@ -249,7 +258,7 @@ int main()
 					check_vse[i] += choose;
 					check_vse[9] = 0;
 					proverka_fruit += 1;
-					summ_check += choose * arr_fruit[i];
+					summ_check += choose * arr_vse[i];
 					summ_check -= summ_nastoyki;
 					break;
 				}
@@ -300,10 +309,10 @@ int main()
 					{
 						std::cout << "Поздравляем! У вас скидка! Каждый 4 литр бесплатно";
 						Sleep(1500);
-						summ_check -= skidka_ovoshi * arr_ovoshi[i - 1];
+						summ_check -= skidka_ovoshi * arr_vse[i + 3];
 					}
 					check_vse[i + 3] += choose;
-					summ_check += choose * arr_ovoshi[i - 1];
+					summ_check += choose * arr_vse[i+3];
 					break;
 				}
 				break;
@@ -351,17 +360,17 @@ int main()
 					if (i == 2 && petruska_skidka == 0)
 					{
 
-						summ_check -= PodschetSkidka(skidka, choose, summ_check, arr_tea[1]);
+						summ_check -= PodschetSkidka(skidka, choose, summ_check, arr_vse[8]);
 						petruska_skidka += 1;
 					}
 
-					summ_check += choose * arr_tea[i - 1];
+					summ_check += choose * arr_vse[i+6];
 					break;
 				}
 				break;
 			}
 		}
-		else if (choose == 4 && proverka_fruit == 0)
+		else if (choose == 4 && check_vse[0] == 0 && check_vse[1] == 0 && check_vse[2] == 0 && check_vse[3] == 0)
 		{
 			while (true)
 			{
@@ -397,9 +406,8 @@ int main()
 						Sleep(1500);
 						continue;
 					}
-					proverka_nastoyki++;
 					check_vse[i + 8] += choose;
-					summ_nastoyki += choose * arr_nastoyka[i - 1];
+					summ_nastoyki += choose * arr_vse[i+8];
 					summ_check += summ_nastoyki;
 					break;
 				}
@@ -512,9 +520,7 @@ int main()
 				}
 				else if (choose == 3)
 				{
-					std::cout << "В разработке\n";
-					Sleep(1500);
-					continue;
+					
 					summ_check -= GalyaOtmena(check_vse);
 
 				}
