@@ -158,7 +158,7 @@ int GalyaOtmena(int check_vse[])
 					}
 					std::cout << "Нет такого выбора";
 					Sleep(1500);
-					continue;
+					break;
 				}
 				else if (choose == 0)
 				{
