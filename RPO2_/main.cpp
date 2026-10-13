@@ -7,12 +7,12 @@
 int PodschetSkidka(int skidka, int kolvo, int summ_check, int arr_tea)
 {
 	skidka = kolvo / 3;
-	if (skidka > 0 )
+	if (skidka > 0)
 	{
-		
+
 		std::cout << "Поздравляем! Скидка целых 5 процентов\n";
 		Sleep(1500);
-		
+
 		summ_check = (((3 * arr_tea) * 5) / 100) * 1;
 		return summ_check;
 	}
@@ -41,21 +41,21 @@ int GalyaOtmena(int check_vse[])
 	int arr_tea[2] = { 125, 250 };
 	int arr_nastoyka[1] = { 100 };
 	int summ_check = 0;
-	int arr_vse[10] = { 100, 200, 300, 400, 25, 30, 50, 125, 250, 100};
+	int arr_vse[10] = { 100, 200, 300, 400, 25, 30, 50, 125, 250, 100 };
 
 	while (true)
 	{
 		int choose = 0;
 		system("cls");
 		std::cout << "Вы взяли: \n";
-		
+
 
 
 
 
 		if (check_vse != 0)
 		{
-			for (int i = 1, b=0; ; )
+			for (int i = 1, b = 0; ; )
 			{
 				if (check_vse[0] != 0)
 				{
@@ -66,7 +66,7 @@ int GalyaOtmena(int check_vse[])
 						std::cout << apple[j];
 					}
 					std::cout << ": " << check_vse[0] << "\n";
-					
+
 				}
 				if (check_vse[1] != 0)
 				{
@@ -77,7 +77,7 @@ int GalyaOtmena(int check_vse[])
 						std::cout << orange[j];
 					}
 					std::cout << ": " << check_vse[1] << "\n";
-					
+
 				}
 				if (check_vse[2] != 0)
 				{
@@ -88,7 +88,7 @@ int GalyaOtmena(int check_vse[])
 						std::cout << abrikos[j];
 					}
 					std::cout << ": " << check_vse[2] << "\n";
-					
+
 				}
 				if (check_vse[3] != 0)
 				{
@@ -99,7 +99,7 @@ int GalyaOtmena(int check_vse[])
 						std::cout << grusha[j];
 					}
 					std::cout << ": " << check_vse[3] << "\n";
-					
+
 				}
 				if (check_vse[4] != 0)
 				{
@@ -110,7 +110,7 @@ int GalyaOtmena(int check_vse[])
 						std::cout << tomato[j];
 					}
 					std::cout << ": " << check_vse[4] << "\n";
-					
+
 				}
 				if (check_vse[5] != 0)
 				{
@@ -121,7 +121,7 @@ int GalyaOtmena(int check_vse[])
 						std::cout << luk[j];
 					}
 					std::cout << ": " << check_vse[5] << "\n";
-					
+
 				}
 				if (check_vse[6] != 0)
 				{
@@ -132,7 +132,7 @@ int GalyaOtmena(int check_vse[])
 						std::cout << cucember[j];
 					}
 					std::cout << ": " << check_vse[6] << "\n";
-					
+
 				}
 				if (check_vse[7] != 0)
 				{
@@ -143,7 +143,7 @@ int GalyaOtmena(int check_vse[])
 						std::cout << chesnok[j];
 					}
 					std::cout << ": " << check_vse[7] << "\n";
-					
+
 				}
 				if (check_vse[8] != 0)
 				{
@@ -154,7 +154,7 @@ int GalyaOtmena(int check_vse[])
 						std::cout << petrusha[j];
 					}
 					std::cout << ": " << check_vse[8] << "\n";
-					
+
 				}
 				if (check_vse[9] != 0)
 				{
@@ -165,7 +165,7 @@ int GalyaOtmena(int check_vse[])
 						std::cout << boyar[j];
 					}
 					std::cout << ": " << check_vse[9] << "\n";
-					
+
 				}
 				std::cout << "Какой товар вы хотите удалить? (0 - передумали удалять)\n";
 				std::cout << "Ввод: ";
@@ -178,13 +178,13 @@ int GalyaOtmena(int check_vse[])
 						if (choose == arr[i][b])
 						{
 							check_vse[j] = 0;
-							
+
 							summ_check = arr_vse[j];
 							std::cout << "Успешно";
 							Sleep(1500);
-							
 
-							
+
+
 							return summ_check;
 						}
 					}
@@ -198,12 +198,12 @@ int GalyaOtmena(int check_vse[])
 				}
 				break;
 			}
-			
+
 
 
 		}
 	}
-	
+
 	return 0;
 }
 
@@ -213,10 +213,10 @@ int main()
 	SetConsoleCP(CP_UTF8);
 	SetConsoleOutputCP(CP_UTF8);
 
-	int choose=0;
+	int choose = 0;
 	int skidka = 0;
-	int arr_fruit[4] = {100, 200, 300, 400};
-	
+	int arr_fruit[4] = { 100, 200, 300, 400 };
+
 	const int size = 20;
 	const char apple[size] = "Яблоко";
 	const char orange[size] = "Апельсин";
@@ -248,8 +248,8 @@ int main()
 	{
 		system("cls");
 
-		
-	
+
+
 
 		std::cout << "\n\n\t\tJunior Магазин\n\n";
 		std::cout << "Категории соков:\n\n";
@@ -287,7 +287,7 @@ int main()
 					continue;
 				}
 
-				for (int i = kategory-1; ; )
+				for (int i = kategory - 1; ; )
 				{
 					system("cls");
 					std::cout << "\n\n\t\tJunior Магазин\n\n";
@@ -300,7 +300,7 @@ int main()
 						Sleep(1500);
 						continue;
 					}
-					
+
 					check_vse[i] += choose;
 					check_vse[9] = 0;
 					proverka_fruit += 1;
@@ -330,7 +330,7 @@ int main()
 				{
 					break;
 				}
-				
+
 				if (kategory > 3 || kategory < 0)
 				{
 					std::cout << "Нет такой категории\n";
@@ -355,14 +355,14 @@ int main()
 					{
 						std::cout << "Поздравляем! У вас скидка! Каждый 4 литр бесплатно";
 						Sleep(1500);
-						summ_check -= skidka_ovoshi * arr_ovoshi[i-1];
+						summ_check -= skidka_ovoshi * arr_ovoshi[i - 1];
 					}
 					check_vse[i + 3] += choose;
 					summ_check += choose * arr_ovoshi[i - 1];
 					break;
 				}
 				break;
-				
+
 			}
 		}
 		else if (choose == 3)
@@ -405,11 +405,11 @@ int main()
 					check_vse[i + 6] += choose;
 					if (i == 2 && petruska_skidka == 0)
 					{
-						
+
 						summ_check -= PodschetSkidka(skidka, choose, summ_check, arr_tea[1]);
 						petruska_skidka += 1;
 					}
-					
+
 					summ_check += choose * arr_tea[i - 1];
 					break;
 				}
@@ -473,10 +473,11 @@ int main()
 			{
 				system("cls");
 				std::cout << "\n\n\t\tJunior Магазин\n\n";
-				std::cout << "Корзина:\n";
+
 
 				if (check_vse != 0)
 				{
+					std::cout << "Корзина:\n";
 					if (check_vse[0] != 0)
 					{
 						for (int j = 0; j <= size; j++)
@@ -557,13 +558,13 @@ int main()
 						}
 						std::cout << ": " << check_vse[9] << "\n";
 					}
-					
-					
-					
-					
+
+
+
+
 				}
-				
-				
+
+
 				std::cout << "\n\nВы накупили на сумму " << summ_check << ".\n\n";
 				if (summ_check > 1000)
 				{
@@ -582,7 +583,7 @@ int main()
 					Sleep(1500);
 					choose = 0;
 					skidka = 0;
-					
+
 					proverka_fruit = 0;
 					check = 0;
 					kategory = 0;
@@ -591,22 +592,25 @@ int main()
 					summ_check_skidka = 0;
 					proverka_nastoyki = 0;
 					summ_nastoyki = 0;
-					for (int i = 0; i <10; i++)
+					for (int i = 0; i < 10; i++)
 					{
 						check_vse[i] = 0;
 					}
-					
+
 					break;
 				}
 				else if (choose == 2)
 				{
-					
+
 					break;
 				}
 				else if (choose == 3)
 				{
+					std::cout << "В разработке\n";
+					Sleep(1500);
+					continue;
 					summ_check -= GalyaOtmena(check_vse);
-					
+
 				}
 				else
 				{
@@ -614,7 +618,7 @@ int main()
 					Sleep(1500);
 				}
 			}
-			
+
 		}
 		else
 		{
