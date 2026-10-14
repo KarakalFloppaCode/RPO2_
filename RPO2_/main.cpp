@@ -21,6 +21,7 @@ int PodschetSkidka(int skidka, int kolvo, int summ_check, int arr_tea)
 		return 0;
 	}
 }
+
 int GalyaOtmena(int check_vse[])
 {
 	
@@ -36,6 +37,7 @@ int GalyaOtmena(int check_vse[])
 	{
 		int choose = 0;
 		system("cls");
+		std::cout << "\n\n\t\tJunior Магазин\n\n";
 		std::cout << "Вы взяли: \n";
 	
 
