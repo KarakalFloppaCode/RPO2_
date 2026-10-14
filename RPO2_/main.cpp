@@ -26,11 +26,6 @@ int GalyaOtmena(int check_vse[])
 {
 	
 	int arr[11][2];
-	
-	int arr_fruit[4] = { 100, 200, 300, 400 };
-	int arr_ovoshi[3] = { 25, 30, 50 };
-	int arr_tea[2] = { 125, 250 };
-	int arr_nastoyka[1] = { 100 };
 	int summ_check = 0;
 	int arr_vse[10] = { 100, 200, 300, 400, 25, 30, 50, 125, 250, 100 };
 	while (true)
